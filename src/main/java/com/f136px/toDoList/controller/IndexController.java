@@ -6,11 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.f136px.toDoList.service.AuthenticationService;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
@@ -24,9 +23,9 @@ public class IndexController {
 
 	// GET /login
 	@GetMapping("/")
-	public String goToIndexPage(ModelMap model) {
+	public ModelAndView goToIndexPage(ModelMap model) {
 		model.put("nome", authenticationService.getLoggedUsername());
-		return "index";
+		return new ModelAndView("redirect:/afazeres");
 	}
 
 

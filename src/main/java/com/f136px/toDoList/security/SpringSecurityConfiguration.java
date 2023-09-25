@@ -39,9 +39,9 @@ public class SpringSecurityConfiguration {
     public InMemoryUserDetailsManager createUserDetailsManager() {
 
       UserDetails userDetails = createNewUser("filipe", "123");
-      UserDetails userDetails2 = createNewUser("filipo", "234");
+      UserDetails userDetails2 = createNewUser("joao", "joao123");
 
-        return new InMemoryUserDetailsManager(userDetails, userDetails2);
+        return new InMemoryUserDetailsManager(userDetails, userDetails2); // hardcoding users cadastrados
     }
 
     @Bean

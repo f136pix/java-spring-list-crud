@@ -79,7 +79,7 @@ public class AfazerController {
 	}
 
 	@PostMapping("/update-afazer")
-	public String atualizarAfazer(ModelMap model, @Valid Afazer afazer, BindingResult result) { // baean de adicionar-afazer.jsp é o afazer sendo parametizado
+	public String atualizarAfazer(ModelMap model, @Valid Afazer afazer, BindingResult result) { // bean de adicionar-afazer.jsp é o afazer sendo parametizado
 
 		if(result.hasErrors())  { // if validation errors
 			return "adicionar-afazer";
